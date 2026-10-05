@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مركز حواء الرياضي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#241521;
+    --ink-soft:#6c5866;
+    --paper:#fbf6f8;
+    --panel:#ffffff;
+    --line:#ecdde5;
+    --plum-900:#330f29;
+    --plum-700:#5c1b46;
+    --fuchsia-500:#b31d63;
+    --fuchsia-200:#f2d3e1;
+    --fuchsia-100:#faeef3;
+    --mauve:#b3617f;
+    --shadow:0 10px 30px -14px rgba(51,15,41,.30);
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#f3e7ef;
+      --ink-soft:#cfb9c7;
+      --paper:#1a1017;
+      --panel:#241621;
+      --line:#432b3b;
+      --plum-900:#f3c9e2;
+      --plum-700:#eaa8d0;
+      --fuchsia-500:#e75c93;
+      --fuchsia-200:#4a2338;
+      --fuchsia-100:#331b29;
+      --mauve:#d98fab;
+      --shadow:0 10px 30px -14px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#f3e7ef;
+    --ink-soft:#cfb9c7;
+    --paper:#1a1017;
+    --panel:#241621;
+    --line:#432b3b;
+    --plum-900:#f3c9e2;
+    --plum-700:#eaa8d0;
+    --fuchsia-500:#e75c93;
+    --fuchsia-200:#4a2338;
+    --fuchsia-100:#331b29;
+    --mauve:#d98fab;
+    --shadow:0 10px 30px -14px rgba(0,0,0,.5);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans Arabic','Tahoma',sans-serif;
+    line-height:1.8;
+  }
+  .display{
+    font-family:'Tajawal','Tahoma',sans-serif;
+    font-weight:800;
+    text-wrap:balance;
+  }
+  a{color:inherit;}
+
+  .notice{
+    background:var(--plum-900);
+    color:var(--paper);
+    text-align:center;
+    padding:11px 18px;
+    font-size:12.5px;
+    letter-spacing:.2px;
+  }
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:74px 0 56px;
+    overflow:hidden;
+    text-align:center;
+  }
+  .hero .orn{
+    position:absolute;
+    top:-40px;
+    inset-inline-end:-60px;
+    width:280px;
+    height:280px;
+    opacity:.5;
+    z-index:0;
+  }
+  :root[data-theme="dark"] .hero .orn{opacity:.3;}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .hero .orn{opacity:.3;}
+  }
+  .hero .inner{position:relative;z-index:1;}
+  .eyebrow{
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:.14em;
+    color:var(--fuchsia-500);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 16px;
+    margin-bottom:26px;
+  }
+  .hero h1{
+    font-size:clamp(36px,7.2vw,52px);
+    color:var(--plum-900);
+    margin:0 0 6px;
+  }
+  .hero .place{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+    letter-spacing:.04em;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--plum-900);
+    color:var(--paper);
+    padding:14px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14.5px;
+    box-shadow:var(--shadow);
+  }
+  .btn.ghost{
+    background:transparent;
+    color:var(--plum-900);
+    border:1.5px solid var(--plum-900);
+    box-shadow:none;
+  }
+  :root[data-theme="dark"] .btn{color:var(--ink);}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .btn{color:var(--ink);}
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:52px 0;}
+  .rule{
+    border:0;
+    border-top:1px solid var(--line);
+    margin:0;
+  }
+  .kicker{
+    font-size:12px;
+    letter-spacing:.14em;
+    color:var(--fuchsia-500);
+    margin:0 0 10px;
+  }
+  h2.title{
+    font-size:26px;
+    color:var(--plum-900);
+    margin:0 0 22px;
+  }
+
+  .lede{
+    font-size:16px;
+    color:var(--ink-soft);
+    max-width:60ch;
+  }
+
+  /* services as a divided list, not cards */
+  .services{list-style:none;margin:0;padding:0;}
+  .services li{
+    display:flex;
+    align-items:baseline;
+    gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .services li:first-child{border-top:1px solid var(--line);}
+  .services .mark{
+    flex:0 0 auto;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    border:1px solid var(--mauve);
+    color:var(--plum-700);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Tajawal',sans-serif;
+    font-weight:700;
+    font-size:15px;
+  }
+  .services .txt h3{
+    margin:0 0 3px;
+    font-size:16.5px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .services .txt p{
+    margin:0;
+    font-size:13.5px;
+    color:var(--ink-soft);
+  }
+  .services-note{
+    margin-top:16px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  /* contact card, boutique style */
+  .card-info{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:8px 0;
+    box-shadow:var(--shadow);
+  }
+  .row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:18px 26px;
+  }
+  .row + .row{border-top:1px solid var(--line);}
+  .row .glyph{
+    flex:0 0 auto;
+    width:20px;
+    height:20px;
+    color:var(--fuchsia-500);
+  }
+  .row .label{
+    font-size:11.5px;
+    letter-spacing:.08em;
+    color:var(--ink-soft);
+    margin-bottom:2px;
+  }
+  .row .value{
+    font-size:15px;
+    color:var(--ink);
+  }
+  .row .value.ltr{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums;text-align:right;}
+
+  /* closing */
+  .close{
+    text-align:center;
+    padding:60px 0 70px;
+  }
+  .close h2{
+    font-size:23px;
+    color:var(--plum-900);
+    margin:0 0 12px;
+  }
+  .close p{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    max-width:46ch;
+    margin:0 auto 26px;
+  }
+
+  footer{
+    text-align:center;
+    padding:28px 20px 44px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+  footer strong{color:var(--plum-900);}
+
+  @media(max-width:520px){
+    .hero{padding:56px 0 44px;}
+    .hero .orn{width:190px;height:190px;top:-20px;}
+    section{padding:40px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="notice">تصور تصميمي مبدئي أعدته NUMU VISION وليس الموقع الرسمي للنشاط</div>
+
+<header class="hero">
+  <svg class="orn" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+    <g stroke="var(--fuchsia-500)" stroke-width="1.1">
+      <circle cx="100" cy="100" r="46"/>
+      <circle cx="100" cy="100" r="30"/>
+      <path d="M100 54 L100 30 M100 146 L100 170 M54 100 L30 100 M146 100 L170 100" stroke-width="1"/>
+      <path d="M67 67 L52 52 M133 67 L148 52 M67 133 L52 148 M133 133 L148 148" stroke-width="1"/>
+    </g>
+  </svg>
+  <div class="wrap inner">
+    <span class="eyebrow">تصور رقمي · NUMU VISION</span>
+    <h1 class="display">مركز حواء الرياضي</h1>
+    <p class="place">شارع عمر بن عبدالعزيز — الجبيل البلد</p>
+    <a class="btn" href="https://wa.me/966550985038" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.14h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.06c-1.5 0-2.91-.4-4.13-1.1l-.3-.17-3.21.81.86-3.13-.19-.32a8.14 8.14 0 0 1-1.24-4.24c0-4.5 3.66-8.16 8.21-8.16 4.55 0 8.21 3.66 8.21 8.16 0 4.5-3.66 8.15-8.21 8.15Z"/></svg>
+      تواصلي عبر واتساب
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+  <hr class="rule">
+
+  <section>
+    <p class="kicker">عن المركز</p>
+    <h2 class="title">حضور نشط على عدة منصات، بلا واجهة واحدة تجمعه</h2>
+    <p class="lede">
+      مركز حواء الرياضي مركز رياضي نسائي في الجبيل البلد يضم صالة أجهزة رياضية،
+      مسبحًا، صالات تمارين، وصالة كروس فيت. للمركز حضور رقمي نشط وموزّع على
+      إنستغرام وتيك توك ويوتيوب وفيسبوك، إضافة إلى ظهوره في دليل حجوزات خارجي
+      (Fresha) لا يحمل هوية المركز الخاصة. رغم هذا النشاط الحقيقي والمرافق
+      الجاهزة، لا يملك المركز حتى الآن موقعًا إلكترونيًا واحدًا يقدّم هويته
+      وخدماته وطريقة التواصل معه في مكان واحد.
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="kicker">مقترح للعرض</p>
+    <h2 class="title">مرافق المركز</h2>
+    <ul class="services">
+      <li>
+        <span class="mark">أ</span>
+        <span class="txt">
+          <h3>صالة الأجهزة الرياضية</h3>
+          <p>تمارين حرة وأجهزة مقاومة</p>
+        </span>
+      </li>
+      <li>
+        <span class="mark">س</span>
+        <span class="txt">
+          <h3>حمام السباحة</h3>
+          <p>خاص بالسيدات</p>
+        </span>
+      </li>
+      <li>
+        <span class="mark">ك</span>
+        <span class="txt">
+          <h3>صالة الكروس فيت</h3>
+          <p>تمارين جماعية عالية الكثافة</p>
+        </span>
+      </li>
+      <li>
+        <span class="mark">ط</span>
+        <span class="txt">
+          <h3>أنشطة للسيدات والأطفال</h3>
+          <p>حسب ما يتوفر لدى المركز</p>
+        </span>
+      </li>
+    </ul>
+    <p class="services-note">تصنيف عام مقترح استنادًا لما ورد عن مرافق المركز في نتائج البحث — القائمة النهائية والأسعار وباقات الاشتراك تُحدَّد بالتنسيق مع المركز.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <p class="kicker">معلومات التواصل</p>
+    <h2 class="title">كيف نصل إليكم</h2>
+    <div class="card-info">
+      <div class="row">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span><span class="label">الموقع</span><br><span class="value">شارع عمر بن عبدالعزيز، الجبيل البلد</span></span>
+      </div>
+      <div class="row">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.14h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Z"/></svg>
+        <span><span class="label">واتساب</span><br><a class="value ltr" href="https://wa.me/966550985038" target="_blank" rel="noopener">0550985038</a></span>
+      </div>
+      <div class="row">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        <span><span class="label">إنستغرام</span><br><a class="value ltr" href="https://www.instagram.com/hawaa_gym/" target="_blank" rel="noopener">@hawaa_gym</a></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="close">
+    <h2 class="display">مهتمين بواجهة تليق باسم "حواء"؟</h2>
+    <p>هذا مجرد تصور أولي — يسعدنا نطوّر فكرة تناسب هوية المركز الفعلية بالكامل.</p>
+    <a class="btn ghost" href="https://wa.me/966550985038" target="_blank" rel="noopener">تواصلي معنا</a>
+  </div>
+</main>
+
+<footer>
+  تصور تصميمي مبدئي من <strong>NUMU VISION</strong> — وكالة رقمية سعودية · هذا العمل غير رسمي وليس مرتبطًا بإدارة النشاط
+</footer>
+
+</body>
+</html>

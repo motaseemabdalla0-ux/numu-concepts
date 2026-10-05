@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>علياء كافيه | تصور تصميمي مبدئي</title>
+<style>
+  :root{
+    --coffee: #3c2a21;
+    --coffee-dark: #241711;
+    --terracotta: #c26b3f;
+    --cream: #f6ede1;
+    --white: #ffffff;
+    --text-muted: #8a7a6d;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family: 'Tahoma', 'Segoe UI', sans-serif;
+    background: var(--cream);
+    color: var(--coffee-dark);
+    line-height:1.7;
+  }
+  .disclaimer{
+    background: #fff3cd;
+    color:#664d03;
+    text-align:center;
+    font-size:14px;
+    padding:10px 16px;
+    border-bottom:2px solid #ffe69c;
+  }
+  header{
+    background: linear-gradient(160deg, var(--coffee) 0%, var(--coffee-dark) 100%);
+    color: var(--white);
+    padding: 60px 20px 70px;
+    text-align:center;
+  }
+  header .badge{
+    display:inline-block;
+    border:1px solid var(--terracotta);
+    color: #e8a87c;
+    padding:6px 18px;
+    border-radius:30px;
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:42px;
+    margin-bottom:10px;
+    color:var(--white);
+  }
+  header h1 span{ color: #e8a87c; }
+  header p{
+    font-size:18px;
+    color:#d8c9bd;
+    max-width:520px;
+    margin:0 auto;
+  }
+  .stats{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:28px;
+  }
+  .stat{
+    background: rgba(255,255,255,0.08);
+    border:1px solid rgba(232,168,124,0.3);
+    color:var(--white);
+    padding:16px 22px;
+    border-radius:14px;
+    text-align:center;
+    min-width:140px;
+  }
+  .stat .num{ font-size:22px; color:#e8a87c; font-weight:bold; }
+  .stat .label{ font-size:13px; color:#d8c9bd; margin-top:4px; }
+  section{
+    padding: 60px 20px;
+    max-width: 960px;
+    margin:0 auto;
+  }
+  .section-title{
+    text-align:center;
+    margin-bottom:40px;
+  }
+  .section-title h2{
+    font-size:30px;
+    color:var(--coffee);
+    position:relative;
+    display:inline-block;
+    padding-bottom:14px;
+  }
+  .section-title h2::after{
+    content:"";
+    position:absolute;
+    bottom:0; right:50%;
+    transform:translateX(50%);
+    width:60px; height:3px;
+    background:var(--terracotta);
+  }
+  .section-title p{
+    color:var(--text-muted);
+    margin-top:10px;
+  }
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:30px;
+    align-items:center;
+  }
+  .about-card{
+    background:var(--white);
+    border-radius:16px;
+    padding:30px;
+    box-shadow: 0 10px 30px rgba(60,42,33,0.08);
+  }
+  .about-card h3{
+    color:var(--coffee);
+    margin-bottom:12px;
+    font-size:20px;
+  }
+  .about-card p{ color:#5c4b3e; }
+  .menu-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+  }
+  .menu-item{
+    background:var(--white);
+    border-radius:14px;
+    padding:24px;
+    text-align:center;
+    box-shadow: 0 8px 20px rgba(60,42,33,0.06);
+    border-top:3px solid var(--terracotta);
+  }
+  .menu-item .icon{ font-size:34px; margin-bottom:10px; }
+  .menu-item h4{ color:var(--coffee); margin-bottom:8px; font-size:17px; }
+  .menu-item p{ color:var(--text-muted); font-size:14px; }
+  .btn{
+    display:inline-block;
+    background: var(--coffee-dark);
+    color: var(--white);
+    padding:14px 34px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition: transform .2s ease;
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  footer{
+    background: var(--coffee-dark);
+    color:#d8c9bd;
+    text-align:center;
+    padding:40px 20px;
+  }
+  footer .brand{
+    color:#e8a87c;
+    font-weight:bold;
+    margin-bottom:8px;
+    font-size:18px;
+  }
+  footer small{ color:#a0907f; display:block; margin-top:14px; }
+  .contact-box{
+    background:var(--white);
+    border-radius:18px;
+    padding:36px;
+    text-align:center;
+    box-shadow: 0 10px 30px rgba(60,42,33,0.08);
+  }
+  .contact-box h3{ color:var(--coffee); margin-bottom:10px; font-size:22px; }
+  .contact-box p{ color:var(--text-muted); margin-bottom:20px; }
+  @media (max-width:700px){
+    header h1{ font-size:30px; }
+    .about-grid{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="disclaimer">
+    تصور تصميمي مبدئي أعدته NUMU VISION وليس الموقع الرسمي للنشاط
+  </div>
+
+  <header>
+    <span class="badge">قهوة مختصة — بريدة</span>
+    <h1>علياء <span>كافيه</span></h1>
+    <p>وجهة محبي القهوة المختصة في حي الإسكان بطريق الملك خالد، بريدة — أجواء هادئة وجلسات خارجية مريحة</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="num">4.4★</div>
+        <div class="label">تقييم الزوار</div>
+      </div>
+      <div class="stat">
+        <div class="num">+1,000</div>
+        <div class="label">متابع على إنستغرام</div>
+      </div>
+      <div class="stat">
+        <div class="num">13:00–01:00</div>
+        <div class="label">مفتوح يوميًا</div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-title">
+      <h2>عن الكافيه</h2>
+      <p>قهوة مختصة بروح بريدة</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>قهوة مختصة حقيقية</h3>
+        <p>يقدّم علياء كافيه تشكيلة من مشروبات القهوة المختصة والحلى، بأسعار تبدأ من 8 ريال وتتنوع حسب المشروب، وبعناية في التحضير تلائم ذوّاقة القهوة.</p>
+      </div>
+      <div class="about-card">
+        <h3>موقع مميز في حي الإسكان</h3>
+        <p>يقع الكافيه على طريق الملك خالد في حي الإسكان ببريدة، ويفتح أبوابه يوميًا من الواحدة ظهرًا حتى الواحدة بعد منتصف الليل، مع جلسات خارجية مريحة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--white); border-radius:24px; max-width:1000px;">
+    <div class="section-title">
+      <h2>من قائمتنا</h2>
+      <p>تشكيلة تناسب كل الأذواق</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="icon">☕</div>
+        <h4>قهوة مختصة</h4>
+        <p>تشكيلة من المشروبات الساخنة والباردة المحضّرة بعناية</p>
+      </div>
+      <div class="menu-item">
+        <div class="icon">🧊</div>
+        <h4>مشروبات باردة</h4>
+        <p>قهوة مقطّرة باردة ومشروبات منعشة لأجواء بريدة</p>
+      </div>
+      <div class="menu-item">
+        <div class="icon">🍰</div>
+        <h4>حلى ومعجنات</h4>
+        <p>تشكيلة حلى تناسب فنجان القهوة المفضّل لديكم</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact-box">
+      <h3>تواصلوا معنا</h3>
+      <p>للاستفسار أو لمعرفة أوقات الزيارة والجلسات الخارجية</p>
+      <a class="btn" href="#">تواصل عبر واتساب</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">علياء كافيه</div>
+    <p>طريق الملك خالد، حي الإسكان، بريدة — يوميًا من 1 ظهرًا حتى 1 بعد منتصف الليل</p>
+    <small>هذا تصور تصميمي أولي أعدته NUMU VISION لأغراض العرض فقط، وليس الموقع الرسمي لعلياء كافيه</small>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مكتب أعمال الزبيري للعقارات — تصور تصميمي مبدئي</title>
+<style>
+  :root{
+    --navy-deep:#0d2235;
+    --navy:#163a56;
+    --navy-light:#e9eef3;
+    --gold:#b6904a;
+    --gold-light:#f3e9d4;
+    --ink:#1b2630;
+    --muted:#5c6975;
+    --bg:#faf9f6;
+    --card:#ffffff;
+    --border:#e2e2de;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Tahoma','Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.7;
+  }
+  .disclaimer{
+    background:#fff3cd;
+    color:#6b5420;
+    text-align:center;
+    font-size:14px;
+    padding:10px 16px;
+    border-bottom:2px solid #e9c767;
+    font-weight:bold;
+  }
+  header{
+    background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+    color:#fff;
+    padding:48px 20px 56px;
+    text-align:center;
+  }
+  header .eyebrow{
+    letter-spacing:1px;
+    font-size:13px;
+    opacity:.85;
+    margin-bottom:10px;
+  }
+  header h1{
+    font-size:30px;
+    margin-bottom:10px;
+  }
+  header p.tagline{
+    font-size:16px;
+    opacity:.95;
+    max-width:560px;
+    margin:0 auto;
+  }
+  .license-badge{
+    display:inline-block;
+    margin-top:16px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.3);
+    color:#fff;
+    font-size:12.5px;
+    padding:6px 16px;
+    border-radius:20px;
+  }
+  nav{
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    background:var(--card);
+    padding:14px 10px;
+    border-bottom:1px solid var(--border);
+    flex-wrap:wrap;
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  nav a{
+    color:var(--navy-deep);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+  }
+  main{
+    max-width:900px;
+    margin:0 auto;
+    padding:40px 20px;
+  }
+  section{margin-bottom:56px;}
+  h2{
+    color:var(--navy-deep);
+    font-size:24px;
+    margin-bottom:18px;
+    border-right:4px solid var(--gold);
+    padding-right:12px;
+  }
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  .info-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:20px;
+  }
+  .info-card .label{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:6px;
+  }
+  .info-card .value{
+    font-size:16px;
+    font-weight:bold;
+  }
+  .services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+  }
+  .service-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:22px;
+    text-align:center;
+    transition:box-shadow .2s;
+  }
+  .service-card:hover{box-shadow:0 6px 18px rgba(0,0,0,.06);}
+  .service-card .icon{
+    font-size:30px;
+    margin-bottom:10px;
+    display:block;
+  }
+  .service-card h3{
+    color:var(--navy-deep);
+    font-size:15.5px;
+    margin-bottom:6px;
+  }
+  .service-card p{
+    color:var(--muted);
+    font-size:13px;
+  }
+  .platforms{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .platform-chip{
+    background:var(--gold-light);
+    color:var(--navy-deep);
+    border:1px solid var(--gold);
+    border-radius:30px;
+    padding:9px 18px;
+    font-size:13.5px;
+    font-weight:bold;
+  }
+  .location-box{
+    background:var(--navy-light);
+    border-radius:14px;
+    padding:22px;
+  }
+  .location-box h3{color:var(--navy-deep);font-size:17px;margin-bottom:8px;}
+  .location-box p{color:var(--muted);font-size:14px;}
+  .cta{
+    background:linear-gradient(135deg,var(--navy),var(--navy-deep));
+    color:#fff;
+    border-radius:16px;
+    padding:36px 24px;
+    text-align:center;
+  }
+  .cta h2{color:#fff;border-color:var(--gold);}
+  .cta p{opacity:.9;margin-bottom:20px;}
+  .btn-whatsapp{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    color:var(--navy-deep);
+    padding:14px 32px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:16px;
+    text-decoration:none;
+  }
+  footer{
+    text-align:center;
+    padding:28px;
+    color:var(--muted);
+    font-size:13px;
+    border-top:1px solid var(--border);
+  }
+  @media(max-width:680px){
+    .about-grid{grid-template-columns:1fr;}
+    .services{grid-template-columns:1fr 1fr;}
+    header h1{font-size:24px;}
+    nav{gap:16px;}
+  }
+  @media(max-width:420px){
+    .services{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="disclaimer">
+  تصور تصميمي مبدئي أعدته NUMU VISION وليس الموقع الرسمي للنشاط
+</div>
+
+<header>
+  <div class="eyebrow">عقارات وخدمات وساطة عقارية</div>
+  <h1>مكتب أعمال الزبيري للعقارات</h1>
+  <p class="tagline">بيع، شراء، تأجير، وإدارة أملاك في خميس مشيط — بخبرة ميدانية وترخيص فال رسمي</p>
+  <span class="license-badge">مكتب عقاري مرخّص — رخصة فال رقم 1200004467</span>
+</header>
+
+<nav>
+  <a href="#about">من نحن</a>
+  <a href="#services">خدماتنا</a>
+  <a href="#presence">حضورنا</a>
+  <a href="#contact">تواصل معنا</a>
+</nav>
+
+<main>
+
+  <section id="about">
+    <h2>من نحن</h2>
+    <div class="about-grid">
+      <div class="info-card">
+        <div class="label">الموقع</div>
+        <div class="value">شارع أبو بكر الصديق وشارع الستين، بجوار محطة الدريس — خميس مشيط</div>
+      </div>
+      <div class="info-card">
+        <div class="label">التواصل الرئيسي</div>
+        <div class="value">0551177049</div>
+      </div>
+      <div class="info-card">
+        <div class="label">أرقام إضافية</div>
+        <div class="value">0555222562 — 0172222996</div>
+      </div>
+      <div class="info-card">
+        <div class="label">الترخيص</div>
+        <div class="value">منشأة عقارية مرخّصة (فال) منذ أغسطس 2022</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>خدماتنا</h2>
+    <div class="services">
+      <div class="service-card">
+        <span class="icon">🏠</span>
+        <h3>بيع وشراء</h3>
+        <p>وساطة عقارية في بيع وشراء الأراضي والعقارات</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">🔑</span>
+        <h3>التأجير</h3>
+        <p>تأجير وحدات سكنية وتجارية بعقود موثقة</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">📋</span>
+        <h3>إدارة الأملاك</h3>
+        <p>متابعة وتشغيل العقارات نيابة عن الملاك</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">📐</span>
+        <h3>تسويق المخططات</h3>
+        <p>تسويق مخططات الأراضي بأحدث الأساليب</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">💰</span>
+        <h3>التثمين العقاري</h3>
+        <p>تقييم دقيق لقيمة العقارات والأراضي</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">📑</span>
+        <h3>نظام إيجار</h3>
+        <p>توثيق عقود الإيجار إلكترونيًا عبر شبكة إيجار</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="presence">
+    <h2>حضورنا الرقمي</h2>
+    <div class="platforms">
+      <span class="platform-chip">إنستغرام</span>
+      <span class="platform-chip">تيك توك</span>
+      <span class="platform-chip">يوتيوب</span>
+      <span class="platform-chip">سناب شات</span>
+      <span class="platform-chip">X (تويتر)</span>
+      <span class="platform-chip">فيسبوك</span>
+    </div>
+    <br>
+    <div class="location-box">
+      <h3>حضور متعدد المنصات بلا واجهة موحّدة</h3>
+      <p>المكتب نشط فعليًا على ست منصات تواصل مختلفة، لكن كل منصة تعمل بشكل منفصل دون موقع إلكتروني مستقل يجمع العروض العقارية وبيانات المكتب والترخيص في مكان واحد يسهل الوصول إليه والثقة به.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <h2>تواصل مع المكتب</h2>
+    <p>للاستفسار عن العروض العقارية المتاحة أو خدمات البيع والتأجير والإدارة</p>
+    <a class="btn-whatsapp" href="#">📱 تواصل عبر واتساب: 0551177049</a>
+  </section>
+
+</main>
+
+<footer>
+  هذا تصور تصميمي أولي غير رسمي أعدته NUMU VISION، وليس الموقع الرسمي لمكتب أعمال الزبيري للعقارات.
+</footer>
+
+</body>
+</html>
